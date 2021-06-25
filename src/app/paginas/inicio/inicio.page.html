@@ -1,12 +1,27 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>inicio</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header titulo="Inicio"></app-header>
 
 <ion-content>
-  <ion-button routerLink="/registro-de-usuario">Ver Registro de Usuario</ion-button>
+  <ion-list>
+
+    <ion-item
+    *ngFor="let componente of componentes"
+    [routerLink]="componente.direccion"
+    >
+      <ion-icon [name]="componente.icono" slot="start"></ion-icon>
+        {{componente.nombre}}
+      </ion-item> 
+  </ion-list>
+
+
+
+ <!--<ion-icon name="list-outline"></ion-icon>
+3  <ion-icon name="document-text-outline"></ion-icon>
+ 2   <ion-icon name="receipt-outline"></ion-icon>
+  1  <ion-icon name="person-add-outline"></ion-icon>
+
+   <ion-button routerLink="/registro-de-usuario">Ver Registro de Usuario</ion-button>
   <ion-button routerLink="/registro-de-egresos">Ver Registro de Egresos</ion-button>
   <ion-button routerLink="/listar-usuarios">Ver Listar Usuarios</ion-button>
-  <ion-button routerLink="/listar-egresos">Ver Listar Egresos</ion-button>
+  <ion-button routerLink="/listar-egresos">Ver Listar Egresos</ion-button> -->
+
 </ion-content>

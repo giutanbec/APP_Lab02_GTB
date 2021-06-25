@@ -6,6 +6,8 @@ import { IonicModule } from '@ionic/angular';
 
 import { RegistroDeUsuarioPageRoutingModule } from './registro-de-usuario-routing.module';
 
+import { ComponentsModule } from '../../components/components.module';
+
 import { RegistroDeUsuarioPage } from './registro-de-usuario.page';
 
 @NgModule({
@@ -13,6 +15,7 @@ import { RegistroDeUsuarioPage } from './registro-de-usuario.page';
     CommonModule,
     FormsModule,
     IonicModule,
+    ComponentsModule,
     RegistroDeUsuarioPageRoutingModule
   ],
   declarations: [RegistroDeUsuarioPage]

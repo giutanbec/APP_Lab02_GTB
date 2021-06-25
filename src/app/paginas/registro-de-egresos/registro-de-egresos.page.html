@@ -1,12 +1,45 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>registro_de_egresos</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header titulo="Registro de Egresos"></app-header>
 
 <ion-content>
   <ion-button routerLink="/inicio">Ver Inicio</ion-button>
   <ion-button routerLink="/registro-de-usuario">Ver Registro de Usuario</ion-button>
   <ion-button routerLink="/listar-usuarios">Ver Listar Usuarios</ion-button>
   <ion-button routerLink="/listar-egresos">Ver Listar Egresos</ion-button>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Registra aquí algun nuevo egreso!</ion-card-subtitle>
+      <ion-card-title>Registro de Egresos</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Dato 1</ion-label>
+        <ion-input type="text" name="dato1" [(ngModel)]="datos_formulario.dato1"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Dato 2</ion-label>
+        <ion-input type="text" name="dato2" [(ngModel)]="datos_formulario.dato2"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Dato 3</ion-label>
+        <ion-input type="text" name="dato3" [(ngModel)]="datos_formulario.dato3"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Dato 4</ion-label>
+        <ion-input type="text" name="dato4" [(ngModel)]="datos_formulario.dato4"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Dato 5</ion-label>
+        <ion-input type="text" name="dato5" [(ngModel)]="datos_formulario.dato5"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Dato 6</ion-label>
+        <ion-input type="text" name="dato6" [(ngModel)]="datos_formulario.dato6"></ion-input>
+      </ion-item>
+
+      <ion-button expand="full">Registrar</ion-button>
+</ion-card-content>
+</ion-card>
+
 </ion-content>

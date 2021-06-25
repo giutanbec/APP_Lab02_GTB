@@ -6,6 +6,8 @@ import { IonicModule } from '@ionic/angular';
 
 import { ListarEgresosPageRoutingModule } from './listar-egresos-routing.module';
 
+import { ComponentsModule } from '../../components/components.module';
+
 import { ListarEgresosPage } from './listar-egresos.page';
 
 @NgModule({
@@ -13,6 +15,7 @@ import { ListarEgresosPage } from './listar-egresos.page';
     CommonModule,
     FormsModule,
     IonicModule,
+    ComponentsModule,
     ListarEgresosPageRoutingModule
   ],
   declarations: [ListarEgresosPage]
