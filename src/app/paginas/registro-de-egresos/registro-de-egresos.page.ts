@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscriber } from 'rxjs';
+
+
+import { FormularioService } from '../../servicios/formulario.service'
 
 export class EnviarDatos{
    constructor(
-     public dato1,
-     public dato2,
-     public dato3,
-     public dato4,
-     public dato5,
-     public dato6,
+     public descripcion,
+     public precio
    ){}
 
 
@@ -22,11 +22,29 @@ export class EnviarDatos{
 export class RegistroDeEgresosPage implements OnInit {
 
   datos_formulario;
-  constructor() {
-    this.datos_formulario = new EnviarDatos("dato 1","dato 2","dato 3","dato 4","dato 5","dato 6")
+  constructor(private formularioService: FormularioService ) {
+    this.datos_formulario = new EnviarDatos("Añadir descripción","Ingresar precio")
   }
 
   ngOnInit() {
+  }
+
+  enviarDatos(){
+
+   this.formularioService.registrarEgresos(this.datos_formulario).subscribe(
+     (response:any)=>{
+       if(response.egreso){
+         alert("Datos guardados exitosamente");
+       }else{
+         alert("Datos no registrados")
+       }
+     },
+     error=>{
+       alert("Error al registrar")
+     }
+   )
+
+    console.log("Datos del formulario: ", this.datos_formulario)
   }
  
   
