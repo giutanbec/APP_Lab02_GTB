@@ -21,9 +21,9 @@ export class EnviarDatos{
 })
 export class RegistroDeEgresosPage implements OnInit {
 
-  datos_egreso;
+  datos_formulario;
   constructor(private formularioService: FormularioService ) {
-    this.datos_egreso = new EnviarDatos("Añadir descripción","Ingresar precio");
+    this.datos_formulario = new EnviarDatos("Añadir descripción","Ingresar precio");
   }
 
   ngOnInit() {
@@ -31,7 +31,7 @@ export class RegistroDeEgresosPage implements OnInit {
 
   enviarDatos(){
 
-   this.formularioService.registrarEgresos(this.datos_egreso).subscribe(
+   this.formularioService.registrarEgresos(this.datos_formulario).subscribe(
      (response:any)=>{
        if(response.egreso){
          alert("Datos guardados exitosamente");
@@ -44,7 +44,7 @@ export class RegistroDeEgresosPage implements OnInit {
      }
    )
 
-    console.log("Datos del formulario: ", this.datos_egreso)
+    console.log("Datos del formulario: ", this.datos_formulario)
   }
  
   
